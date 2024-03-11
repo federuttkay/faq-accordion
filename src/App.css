@@ -40,16 +40,6 @@ body {
 	display: none;
 }
 
-@media screen and (width > 750px) {
-	.backgroundDesktop {
-		display: block;
-	}
-
-	.backgroundMobile {
-		display: none;
-	}
-}
-
 p {
 	color: var(--grayish-purple);
 }
@@ -96,9 +86,10 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	transition: color 250ms;
 }
 
-.question-title:hover {
+.question-title:active {
 	color: var(--bright-purple);
 	cursor: pointer;
 }
@@ -135,4 +126,17 @@ h2 {
 }
 .displayed .answer-toggle-minus {
 	visibility: visible;
+}
+
+@media screen and (width > 750px) {
+	.backgroundDesktop {
+		display: block;
+	}
+	.backgroundMobile {
+		display: none;
+	}
+	.question-title:hover {
+		color: var(--bright-purple);
+		cursor: pointer;
+	}
 }
